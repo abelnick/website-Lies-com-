@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <title>Lies</title>
+    <style>
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+    min-height: 100vh;
+    
+    background-color: #ff00ff;
+
+    background-image: 
+        conic-gradient(from 90deg at 50% 50%, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000),
+        radial-gradient(circle at 20% 35%, #00ffff 15%, transparent 16%),
+        radial-gradient(circle at 75% 65%, #ffff00 12%, transparent 13%),
+        linear-gradient(45deg, #00ff00 25%, transparent 25.5%),
+        linear-gradient(-45deg, #ffffff 25%, transparent 25.5%),
+        radial-gradient(#ffffff 10%, transparent 11%);
+
+    background-size: 40px 40px, 120px 120px, 180px 180px, 15px 15px, 20px 20px, 10px 10px;
+    background-position: 0 0, 40px 60px, 10px 10px, 5px 5px, 0 0, 2px 2px;
+
+    background-blend-mode: difference;
+}
+
+        .browser-mockup {
+            background: white;
+            border: 8px solid #333;
+            border-radius: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
+            box-shadow: 20px 20px 0px rgba(0,0,0,0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 4px solid #000;
+            padding: 15px;
+            text-align: center;
+            background: #bbaaaa;
+        }
+        header p {
+            font-family: 'Almendra Display', serif;
+            font-size: 28px;
+            color: #000;
+            margin: 5px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-area img {
+          width: 52px;
+          height: auto;
+        }
+
+.logo-main {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 95px;
+    font-weight: normal;
+    color: #0033ff;
+    text-transform: none; 
+    margin: 0;
+    line-height: 0.8;
+    text-shadow: 3px 3px 0px #ff00ff; 
+}       
+        .main-layout {
+            display: grid;
+            grid-template-columns: 220px 1fr 220px;
+            background: #fff;
+        }
+
+
+        .sidebar-left {
+            padding: 15px;
+            border-right: 2px solid #ccc;
+            background: #990aab;
+            
+              
+    background-color: #99aagd;
+
+
+    background-image: 
+        conic-gradient(from 90deg at 50% 50%, #99cdeb, #999999, #994464, #004499, #986432, #348899, #445511),
+        radial-gradient(circle at 2% 35%, #aaf65f 15%, transparent 160%),
+        radial-gradient(circle at 75% 5%, #ffff00 12%, transparent 103%),
+        linear-gradient(45deg, #00ff00 5%, transparent 25.5%),
+        linear-gradient(-45deg, #ffffff 2%, transparent 25.5%),
+        radial-gradient(#ffffff 10%, transparent 11%);
+
+/
+    background-size: 40px 40px, 12px 120px, 180px 180px, 15px 15px, 20px 20px, 10px 10px;
+    background-position: 0 0, 40px 6px, 10px 10px, 5px 5px, 0 0, 28px 2px;
+
+    background-blend-mode: difference;
+        }
+
+        .ling-photo {
+            width: 78px;
+            border: 5px solid #ff00ff;
+            margin-bottom: 10px;
+            mix-blend-mode: multiply;
+        }
+
+        .nav-menu a {
+            display: block;
+            background: #990aab;
+            border: 2px solid #000;
+            padding: 8px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+        }
+        .nav-menu a:hover { background: #aadd33; }
+
+
+        .content-main {
+            padding: 10px;
+            text-align: center;
+            background-color: #ba1000;
+        }
+        .content-main .hh{
+          font-family: 'Almendra Display', serif;
+          font-weight: 900;
+          font-size: 55px;
+        }
+
+        .video-box {
+            background: #000;
+            color: #00ff00;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 6px solid #32cd32;
+            position: relative;
+        }
+
+        .video-overlay-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: yellow;
+            color: black;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .sidebar-right {
+            padding: 10px;
+            border-left: 2px solid #ccc;
+            background: #A9A9A9;
+        }
+        .sidebar-right img{
+          width: 90px;
+          height: auto;
+        }
+
+        .delivery-item {
+            font-size: 12px;
+            border-bottom: 1px dashed #666;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .car-deals {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .car-card {
+            border: 3px solid red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .car-card img { width: 100%; height: auto; }
+
+
+        /*.blink {*/
+        /*    animation: blinker 1.3s linear infinite;*/
+        /*    font-weight: bold;*/
+        /*    color: #ff0000;*/
+        /*}*/
+.blink {
+    animation: blinker 1.3s linear infinite;
+    font-family: 'Almendra Display', serif;
+    font-weight: 900; 
+    font-size: 32px;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #FFE4B5; 
+    padding: 0 15px;
+    border: 3px double black;
+}
+        
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        h2.section-title {
+            background: #994556;
+            display: inline-block;
+            padding: 5px 20px;
+            transform: rotate(-2deg);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="browser-mockup">
+    <header>
+        <div class="logo-area" >
+            <img src="https://psychonautguides.news/noticias/png-transparent-computer-icons-psychedelic-miscellaneous-purple-symmetry-removebg-preview.png" alt="icon">
+            <h1 class="logo-main">LIES.com</h1>
+            <img src="https://img1.picmix.com/output/stamp/normal/2/9/5/7/2487592_27600.png" alt="icon">
+        </div>
+        <p>The website! <span class="blink">HAIL OUR TOP PICKS!</span></p>
+    </header>
+
+    <div class="main-layout">
+        
+        <!-- Лево -->
+        <aside class="sidebar-left">
+            <img src="data:image/png;base64,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" class="ling-photo" alt="Ling">
+            <div class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">Cars / Vans</a>
+                <a href="#">About Ling</a>
+                <a href="#">Contract Hire</a>
+                <a href="#">Live Staff</a>
+            </div>
+            <div style="margin-top:20px; border:2px solid black; padding:5px; font-size:14px;">
+                <center><strong>CARd</strong></center>
+                <div style="color: #000000; text-decoration: underline; cursor: pointer;">
+                    Through darkness, the truth is revealed.My soul is a debt I refuse to pay. Thy kingdom falls, my will begins. No gods, no masters, only the void. Thy kingdom falls, my will begins. Burn the heavens, feed the flames.
+                </div>
+            </div>
+        </aside>
+
+        <main class="content-main">
+            <div class="video-box" id="video-box">
+                <div class="video-overlay-text">INTRODUCING...</div>
+                <h2 class="hh" style="font-size: 40px;">A&Wi</h2>
+        
+                <p id="video-trigger" style="font-size: 25px; color: #00ff00; text-decoration: none; cursor: pointer;">
+                    Video Here
+                </p>
+                
+                <div class="blink" style="font-size: 24px; background: white; color: black; padding: 5px;">
+                    LEADER OF THE PACK!
+                </div>
+            </div>
+
+            <h2 class="section-title">SELL YOUR SOUL FOR THESE PRICES!</h2>
+
+            <div class="car-deals">
+                <div class="car-card">
+                    <img src="https://crystalpng.com/wp-content/uploads/2025/03/angry-cat-png.png" alt="">
+                    <p><strong>just good្អ។!</strong></p>
+                </div>
+                <div class="car-card">
+                    <img src="https://i.ibb.co/Vc0pkGwt/ggggg.png" alt="">
+                    <p><strong>MEGA-Benefit!</strong></p>
+                </div>
+                <div class="car-card">
+                    <img src="https://buy.am/media/image/e8/bb/55/1167935.webp" alt="">
+                    <p><strong>CRAZY PRICE!</strong></p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <div style="background:red; color:white; padding:5px; font-weight:bold; text-align:center;">
+                NEW SOULS INITIATED
+            </div>
+            <div class="delivery-item">
+                <strong>DARK APPRENTICE</strong><br>TELEPORTED TO THE BACKROOMS
+            </div>
+            <div class="delivery-item">
+                <strong>VOID WALKER</strong><br>MEGA-LUCIFER-IN-A-BOX
+            </div>
+            <div class="delivery-item">
+                <strong>SOUL REAPER</strong><br>delivered to Metadorn
+            </div>
+            
+            <div style="margin-top:30px; text-align:center;">
+                <img src="https://www.abeautifulstory.eu/cdn/shop/files/Sun_a6f58376-2828-42ce-aca7-12f0c08fe2aa.png?crop=center&height=3000&v=1768571903&width=3000" style="margin-bottom:5px;">
+                <img src="https://spokanecounselinghub.com/wp-content/uploads/2026/01/lgbt_therapy.png">
+            </div>
+        </aside>
+
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 20px; color: white; font-weight: bold; text-shadow: 2px 2px #000;">
+    Abel.ni © 2026 - THE WEBSITE EVERh
+</footer>
+
+<script>
+document.getElementById('video-trigger').onclick = function() {
+    var videoId = "O0d_NhOSvr0"; 
+    var videoUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&enablejsapi=1&origin=http://localhost";
+    
+    var box = document.getElementById('video-box');
+    
+    box.innerHTML = ''; 
+    
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", videoUrl);
+    ifrm.style.width = "100%";
+    ifrm.style.height = "100%";
+    ifrm.style.border = "none";
+    ifrm.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
+    ifrm.setAttribute("allowfullscreen", "");
+    
+    box.appendChild(ifrm);
+};
+</script>
+
+</body>
+</html>
